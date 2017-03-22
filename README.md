@@ -2,15 +2,15 @@
 
 This repository is a simple set up for an Angular single page site. There is already a file structure setup in the public folder that gulp will use to compile and compress your code and move to and create a Dist folder. The node server is set up ready to connect to an SQL databse using massive.
 
-## Installing
-
-After cloning the repo run NPM install to install the needed modules. If you need to install Node.js and NPM it can be downloaded here: [Node offical site](https://nodejs.org/en/download/).
-
 # IMPORTANT CONFIG.JS
 
 This document also includes a blank config.js file. You will be putting in your passwords to ensure security and connection info to your database and encryption. Make sure you add config.js to the .gitignore file, otherwise when you commit and push your code it will be online for all to see, use, and abuse.
 
-## Using Gulp
+## Installing
+
+After cloning the repo run NPM install to install the needed modules. If you need to install Node.js and NPM it can be downloaded here: [Node offical site](https://nodejs.org/en/download/).
+
+## Gulp
 
 Gulp is set up to compile and compress your HTML, SCSS, and JS. It will move it all into another folder called Dist that it will create and manage. When you run the node server it is set up already to use that folder for hosting. One major advantage of Gulp is that you dont have to keep adding files to be referenced in your index.html file, since you are compressing it all into one file just referencing the single Css file on the top and JS file on the bottom will catch them all.
 
@@ -18,7 +18,7 @@ To run gulp type 'gulp' in the root directory of the repo and it will run all th
 
 Gulp is also set up to compile your ES6 javascript to ES5, so feel free to use all the ES6 you want.
 
-## Using SCSS
+## SCSS
 
 SCSS is a CSS pre-processed language, meaning gulp will go through and convert SCSS to CSS, because the browser does not understand SCSS. SCSS understands all CSS and some extra goodies, like variable creation and minor logic. If you want to learn more about SCSS you can visit there official site here: [SASS offical site](http://sass-lang.com/). (SASS and SCSS anr very similar so don't be confused that the site sas SASS. The learn section will teach you both).
 
