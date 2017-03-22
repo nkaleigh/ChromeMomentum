@@ -1,10 +1,10 @@
 # Angular Boilerplate with ui-router, Gulp, SCSS, and Node.js
 
-This repository is a simple set up for an Angular single page site. There is already a file structure setup in the public folder that gulp will use to compile and compress your code and move to and create a Dist folder. The node server is set up ready to connect to an SQL databse using massive.
+This repository is a set up for an Angular single page site. There is already a file structure setup in the public folder that gulp will use to compile and compress your code and move to and create a dist folder. The node server is set up ready to connect to an SQL databse using massive.
 
 # IMPORTANT CONFIG.JS
 
-This document also includes a blank config.js file. You will be putting in your passwords to ensure security and connection info to your database and encryption. Make sure you add config.js to the .gitignore file, otherwise when you commit and push your code it will be online for all to see, use, and abuse.
+This document also includes a blank config.js file. You will be putting in your passwords to ensure security and connection info to your database. Make sure you add the config.js to the .gitignore file, otherwise when you commit and push your code it will be online for all to see, use, and abuse.
 
 ## Installing
 
