@@ -10,6 +10,12 @@ This document also includes a blank config.js file. You will be putting in your 
 
 After cloning the repo run NPM install to install the needed modules. If you need to install Node.js and NPM it can be downloaded here: [Node offical site](https://nodejs.org/en/download/).
 
+### Making this your own
+
+Chances are you don't want your project to be called Angular-boilerplate and you want to push this to a new repo that is named more appropriately for you project, and pushing to your new repo.
+
+Easy way is to create a new repo on your github. Then on the command line while inside of your respository do git remote add (new repo URL). This will push this project to the new repo. Then you can rename the folder to reflect your new project.
+
 ### Gulp
 
 Gulp is set up to compile and compress your HTML, SCSS, and JS. It will move it all into another folder called dist that it will create and manage. When you run the node server it is set up already to use that folder for hosting. One major advantage of Gulp is that you don't have to keep adding files to be referenced in your index.html file since you are compressing it all into one file just referencing the single CSS file in the head and JS file on the bottom will catch them all.
