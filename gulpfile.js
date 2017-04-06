@@ -7,7 +7,9 @@ var gulp = require('gulp')
 ,   uglify = require('gulp-uglify')
 ,   rename = require('gulp-rename')
 ,   cssmin = require('gulp-cssmin')
-,   htmlmin = require('gulp-htmlmin');
+,   htmlmin = require('gulp-htmlmin')
+,   print = require('gulp-print')
+,   babel = require('gulp-babel');
 
 var cachebust = new CacheBuster();
 
@@ -33,9 +35,13 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
     return gulp.src(paths.jsSource)
+        .pipe(sourcemaps.init())
+        .pipe(print())
+        .pipe(babel({presets: ['es2015'] }))
         .pipe(concat('bundle.js'))
         .pipe(annotate())
         .pipe(uglify())
+        .pipe(sourcemaps.write('./'))
         .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest('./dist'));
 });
@@ -63,7 +69,6 @@ gulp.task('watch', function() {
     gulp.watch(paths.indexSource, ['index']);
     gulp.watch(paths.viewsSource, ['views']);
     gulp.watch(paths.picturesSource, ['pictures']);
-    gulp.watch(paths.phpSource, ['php']);
 });
 
 gulp.task('default', ['js', 'sass', 'index', 'views', 'pictures',
