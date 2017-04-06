@@ -28,4 +28,4 @@ All but the reference.scss file start their name with a _ character. This is a s
 
 ### Node.js
 
-Node is a server language that uses javascript as its base. This boilerplate sets up some basic functionality for a server, including CORS, body parser, and massive. CORS and body parser handle formatingn your http requests and massive is a way to connect to your database. There are sections ready to go for adding in other features when you need them.
+Node is a server language that uses javascript as its base. This boilerplate sets up some basic functionality for a server, including CORS, body parser, and massive. CORS and body parser handle formating your http requests and massive is a way to connect to your database. There are sections ready to go for adding in other features when you need them.
