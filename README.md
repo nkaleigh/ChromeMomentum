@@ -14,7 +14,10 @@ After cloning the repo run NPM install to install the needed modules. If you nee
 
 Chances are you don't want your project to be called Angular-boilerplate and you want to push this to a new repo that is named more appropriately for you project.
 
-Easy way is to create a new repo on your github. Then on the command line while inside of your respository do git remote add (new repo URL). This will push this project to the new repo. Then you can rename the folder to reflect your new project.
+Easy way is to create a new repo on your github. Then on the command line while inside of your respository run the following command git `remote remove origin`. This will remove your connection to the forked repo without deleting your code or the repo. Now you can push it to a new repo with an appropriate name, run the commands under 'push an existing repository from the command line' when making a new repository. The commands are `git remote add origin https://github.com/Rasbandit/delete-me.git
+git push -u origin master`
+
+Then rename your local folder and you have a basic app ready to go.
 
 ### Gulp
 
