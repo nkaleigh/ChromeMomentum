@@ -12,7 +12,7 @@ After cloning the repo run NPM install to install the needed modules. If you nee
 
 ### Making this your own
 
-Chances are you don't want your project to be called Angular-boilerplate and you want to push this to a new repo that is named more appropriately for you project, and pushing to your new repo.
+Chances are you don't want your project to be called Angular-boilerplate and you want to push this to a new repo that is named more appropriately for you project.
 
 Easy way is to create a new repo on your github. Then on the command line while inside of your respository do git remote add (new repo URL). This will push this project to the new repo. Then you can rename the folder to reflect your new project.
 
