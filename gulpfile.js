@@ -18,11 +18,11 @@ var cachebust = new CacheBuster();
 //this is an object that keeps track of all the file and folder locations
 //if you move any file structures around update this section
 var paths = {
-    jsSource: ['./public/js/**/*.js'],
-    sassSource: ['./public/styles/**/*.scss'],
-    indexSource: ['./public/index.html'],
-    viewsSource: ['./public/views/**/*.html'],
-    picturesSource: ['./public/pictures/**/*']
+    jsSource: ['./src/js/**/*.js'],
+    sassSource: ['./src/styles/**/*.scss'],
+    indexSource: ['./src/index.html'],
+    viewsSource: ['./views/**/*.html'],
+    picturesSource: ['./src/pictures/**/*']
 };
 
 //SASS task, this compiles and compresses from SCSS fiels to a css file
@@ -33,8 +33,7 @@ gulp.task('sass', function() {
     .pipe(cachebust.resources())
     .pipe(concat('bundle.css'))
     .pipe(sourcemaps.write('./maps'))
-    .pipe(rename({extname: ".min.css"}))
-    .pipe(cssmin())
+    // .pipe(cssmin())
     .pipe(gulp.dest('./dist'));
 });
 
@@ -47,9 +46,8 @@ gulp.task('js', function() {
         .pipe(babel({presets: ['es2015'] }))
         .pipe(concat('bundle.js'))
         .pipe(annotate())
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(sourcemaps.write('./'))
-        .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest('./dist'));
 });
 
