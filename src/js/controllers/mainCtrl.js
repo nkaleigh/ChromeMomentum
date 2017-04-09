@@ -1,13 +1,32 @@
 angular.module("App").controller('mainCtrl', function ($scope, quoteService, weatherLocationService) {
 
-    var newTime = new Date();
-    console.log("newTime", newTime);
 
-    $scope.time = moment(newTime).format('hh:mm a');
-    console.log("time", $scope.time);
-    // $scope.newTime = getHours();
+    //this sets up the clock 
 
 
+        $scope.timeSplit = moment().format('h:mm:a');
+
+        $scope.dayEvents = $scope.timeSplit.split(":");
+        console.log("dayEvents", $scope.dayEvents);
+        if ($scope.dayEvents[2] === 'pm') {
+            if ($scope.dayEvents[0] < 6) {
+                $scope.period = "Good afternoon, ";
+                console.log("period", $scope.period);
+            } else {
+                $scope.period = "Good evening, ";
+                console.log("period", $scope.period);
+            }
+            console.log("hello");
+        } else {
+            $scope.period = "Good morning, ";
+            console.log("period", $scope.period);
+        }
+
+
+    $scope.time = moment().format('h:mm a');
+
+
+    //this sets up the weather and location
     weatherLocationService.getLocation().then(function (result) {
         $scope.location = result.zip;
         console.log("location", $scope.location);
@@ -20,6 +39,7 @@ angular.module("App").controller('mainCtrl', function ($scope, quoteService, wea
         })
     })
 
+    //this sets up the quote
     quoteService.getQuote().then(function (result) {
         console.log("quote", result);
         $scope.quote = result.quote;

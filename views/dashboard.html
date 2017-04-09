@@ -1,12 +1,16 @@
 <div class="outer-wrap">
+    <weather-directive></weather-directive>
+    {{time}}
+    <br>{{period}}
+    <br>
+    <div class="center">
+        What's your name?
+        <form ng-submit="addName(userName)" ng-if="!name">
+            <input type="text" class="input-line" name="name" ng-model="userName">
+        </form>
+        <div class="greeting">{{period}} Kaleigh</div>     
 
- {{temp}}
-<br> {{location}}
-<br> {{time}}; {{city}}
-<br>
-<br> {{quote}}
-<br> {{author}}
-
+    </div>
+    <br> {{quote}}
+    <br> {{author}}
 </div>
-
-
