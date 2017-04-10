@@ -3,8 +3,10 @@
     width: 80px;
     height: 50px;
     float: right;
-    background: black;
-    margin: 20px;
+    // background: black;
+    position: relative;
+    top: 10px;
+    right: 10px;
     .temp {
         color: white;
         text-align: right;

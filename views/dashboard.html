@@ -3,15 +3,13 @@
         <weather-directive></weather-directive>
     </div>
     <div class="center">
-        <div class="time-greeting">
-            <p class="time">{{time}}</p>
-            <!--What's your name?-->
-            <div class="greeting">
-                <form ng-submit="addName(userName)" ng-if="!name">
-                    <input type="text" class="input-line" name="name" placeholder="What is your name?" ng-model="userName">
-                </form>
-                <div class="input-line" ng-if="name">{{period}}{{name}}</div>
-            </div>
+        <p class="time">{{time}}</p>
+        <!--What's your name?-->
+        <div class="greeting">
+            <form class="" ng-submit="addName(userName)" ng-if="!name">
+                <input type="text" class="input-line" placeholder="What is your name?" ng-model="userName">
+            </form>
+            <div class="input-line" ng-if="name">{{period}}{{name}}</div>
         </div>
     </div>
     <div class="bottom">
