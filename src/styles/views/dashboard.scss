@@ -1,5 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 .outer-wrap {
+    width: 100%;
+    height: 100vh;
+    // font-family: 'Lato', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url("./pictures/sean-mcauliffe-12857.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .top {
+        width: 100%;
+        height: 15vh;
+        background: burlywood;
+    }
     .center {
-        .input-line {}
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        .time-greeting {
+            height: 100%;
+            width: 50%;
+            background: red;
+            text-align: center;
+            .time {
+                font-size: 10em;
+                font-weight: 700;
+                // text-align: center;
+            }
+            .greeting {
+                // text-align: center;
+            }
+            .input-line {
+                // text-align: center;
+            }
+        }
+    }
+    .bottom {
+        width: 100%;
+        height: 15vh;
+        background: black;
+        .quote {
+            font-size: .7em;
+            text-align: center;
+           float: center;
+           padding: 20px;
+            .quote-text {
+            }
+            .quote-author {
+            }
+        }
     }
 }

@@ -4,11 +4,11 @@ angular.module("App").controller('mainCtrl', function ($scope, quoteService, wea
     //this sets up the clock 
 
 
-    $scope.timeSplit = moment().format('h:mm:a');
+    $scope.timeSplit = moment().format('h:mm:A');
 
     $scope.dayEvents = $scope.timeSplit.split(":");
     console.log("dayEvents", $scope.dayEvents);
-    if ($scope.dayEvents[2] === 'pm') {
+    if ($scope.dayEvents[2] === 'AM') {
         if ($scope.dayEvents[0] < 6) {
             $scope.period = "Good afternoon, ";
             console.log("period", $scope.period);
@@ -23,7 +23,9 @@ angular.module("App").controller('mainCtrl', function ($scope, quoteService, wea
     }
 
 
-    $scope.time = moment().format('h:mm a');
+    // $scope.time = moment().format('h:mm A');
+        $scope.time = moment().format('h:mm');
+
 
 
     //this sets up the weather and location
