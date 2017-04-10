@@ -8,7 +8,7 @@ angular.module("App").controller('mainCtrl', function ($scope, quoteService, wea
 
     $scope.dayEvents = $scope.timeSplit.split(":");
     console.log("dayEvents", $scope.dayEvents);
-    if ($scope.dayEvents[2] === 'AM') {
+    if ($scope.dayEvents[2] === 'PM') {
         if ($scope.dayEvents[0] < 6) {
             $scope.period = "Good afternoon, ";
             console.log("period", $scope.period);
