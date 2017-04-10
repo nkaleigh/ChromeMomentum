@@ -1,4 +1,4 @@
-angular.module("App").controller('mainCtrl', function ($scope, quoteService, weatherLocationService, nameService) {
+angular.module("App").controller('mainCtrl', function ($scope, $interval, quoteService, weatherLocationService, nameService) {
 
 
     //this sets up the clock 
@@ -24,32 +24,46 @@ angular.module("App").controller('mainCtrl', function ($scope, quoteService, wea
 
 
     // $scope.time = moment().format('h:mm A');
+    $scope.time = moment().format('h:mm');
+
+var myVar = setInterval(function(){updateTime()}, 1000);
+
+
+    function updateTime() {
         $scope.time = moment().format('h:mm');
-
-
-
-    //this sets up the weather and location
-    weatherLocationService.getLocation().then(function (result) {
-        $scope.location = result.zip;
-        console.log("location", $scope.location);
-
-        weatherLocationService.getWeather($scope.location).then(function (result) {
-            $scope.temp = Math.floor(result.data.main.temp);
-            console.log($scope.temp);
-            $scope.city = result.data.name;
-            console.log("name", $scope.city);
-        })
-    })
-
-    //this sets up the quote
-    quoteService.getQuote().then(function (result) {
-        console.log("quote", result);
-        $scope.quote = result.quote;
-        $scope.author = result.author_name;
-    })
-
-    $scope.addName = function (name) {
-        nameService.store("name", name);
-        $scope.name = name;
     }
+
+
+//     setInterval(function () {
+//         $scope.time = moment().format('h:mm');
+//         conosle.log("hello")
+//     }, 3000);
+// })
+
+
+
+//this sets up the weather and location
+weatherLocationService.getLocation().then(function (result) {
+    $scope.location = result.zip;
+    console.log("location", $scope.location);
+
+    weatherLocationService.getWeather($scope.location).then(function (result) {
+        $scope.temp = Math.floor(result.data.main.temp);
+        console.log($scope.temp);
+        $scope.city = result.data.name;
+        console.log("name", $scope.city);
+    })
+})
+
+//this sets up the quote
+quoteService.getQuote().then(function (result) {
+    console.log("quote", result);
+    $scope.quote = result.quote;
+    $scope.author = result.author_name;
+})
+
+$scope.addName = function (name) {
+nameService.store("name", name);
+$scope.name = name;
+}
 });

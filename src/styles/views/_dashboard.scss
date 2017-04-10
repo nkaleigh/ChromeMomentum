@@ -37,7 +37,8 @@
             margin: 5px;
             color: white;
         }
-        input, placeholder {
+         ::-webkit-input-placeholder {
+            /* Chrome */
             color: white;
         }
         .input-line:focus {
