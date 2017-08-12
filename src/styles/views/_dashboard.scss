@@ -23,12 +23,12 @@
         align-items: center;
         justify-content: center;
         .time {
-            font-size: 7em;
+            font-size: 13em;
             font-weight: 700;
             text-align: center;
         }
         .input-line {
-            font-size: 1.5em;
+            font-size: 3.5em;
             margin: auto;
             text-align: center;
             background: none;
@@ -37,24 +37,29 @@
             margin: 5px;
             color: white;
         }
+         ::-webkit-input-placeholder {
+            /* Chrome */
+            color: white;
+        }
         .input-line:focus {
             outline: none;
         }
-
         .greeting {
             text-align: center;
         }
-
     }
     .bottom {
         width: 100%;
         height: 18vh;
         // background: black;
         .quote {
-            font-size: .7em;
+            font-size: 1.3em;
             text-align: center;
             float: center;
             padding: 20px;
+            position: relative;
+            top: 5px;
+            line-height: 25px;
             .quote-text {}
             .quote-author {}
         }
